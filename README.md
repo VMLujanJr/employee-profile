@@ -24,6 +24,7 @@ You may visit the deployed [website](https://VMLujanJr.github.io/employee-profil
   - [Tests](#tests)
   - [Questions](#questions)
   - [License](#license)
+  - [Extra Information](#extra-information)
 
 ## User Story
 
@@ -136,3 +137,20 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Extra Information
+
+~~~
+.
+├── __tests__/             //jest tests
+│   ├── Employee.test.js
+│   ├── Engineer.test.js
+│   ├── Intern.test.js
+│   └── Manager.test.js
+├── dist/                  // rendered output (HTML) and CSS style sheet      
+├── lib/                   // classes
+├── src/                   // template helper code 
+├── .gitignore             // indicates which folders and files Git should ignore
+├── index.js               // runs the application
+└── package.json           
+~~~
