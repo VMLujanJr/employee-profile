@@ -3,45 +3,8 @@ const Engineer = require('../lib/assets/js/Engineer');
 const Manager = require('../lib/assets/js/Manager');
 const Intern = require('../lib/assets/js/Intern');
 
-const renderTemplate = (receiveUserData) => {
-    
-    console.log(receiveUserData, 'inside template...');
-    
-    // destructure data received
-    const [one, ...two] = receiveUserData;
-    console.log(one, '...this is ONE');
-    console.log(two, '...this is TWO');
-
-
-    console.log(one.name, one.email, one.id, one.officeNumber, '...this is ONE.POINT.OH');
-
-    return `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Portfolio</title>
-    <link rel="stylesheet" href="./output.css" />
-</head>
-<body class="relative min-h-screen">
-    <header>
-        <h1 class="bg-blue-900 text-slate-100 text-center text-4xl p-5">My Team's Portfolios</h1>
-    </header>
-    <main class="flex flex-wrap justify-center">
-        ${generatePortfolios(receiveUserData)}
-    </main>
-    <footer class="absolute inset-x-0 bottom-0 text-center">
-        <h3>&copy; ${new Date().getFullYear()} by <a href="https://github.com/${github}">${github}</a></h3>
-    </footer>
-</body>
-</html>
-    `;
-};
-
 const generatePortfolios = (receiveUserData) => {
-    console.log(receiveUserData, 'BEFORE MAP FUNCTION');
+
     const employee1 = receiveUserData.map(index => {
 
 
@@ -108,11 +71,35 @@ const generatePortfolios = (receiveUserData) => {
             </div>
             `;
         }
-        else {
-            console.log('It didn\'t work!');
-            return false;
-        }
     });
+    console.log(employee1, '❗❗❗❗❗❗');
+};
+
+const renderTemplate = (receiveUserData) => {
+
+    return `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Portfolio</title>
+    <link rel="stylesheet" href="./output.css" />
+</head>
+<body class="relative min-h-screen">
+    <header>
+        <h1 class="bg-blue-900 text-slate-100 text-center text-4xl p-5">My Team's Portfolios</h1>
+    </header>
+    <main class="flex flex-wrap justify-center">
+        ${generatePortfolios(receiveUserData)}
+    </main>
+    <footer class="absolute inset-x-0 bottom-0 text-center">
+        <h3>&copy; ${new Date().getFullYear()} by <a href="https://github.com/VMLujanJr">VMLujanJr</a></h3>
+    </footer>
+</body>
+</html>
+    `;
 };
 
 module.exports = renderTemplate;
