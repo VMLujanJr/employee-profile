@@ -14,6 +14,7 @@ test('create an Employee object', () => {
     expect(employee.name).toBe('Victor');
     expect(employee.email).toBe('vmlujanjr@outlook.com');
     expect(employee.id).toBe('123456789012');
+
 });
 
 test('get Employee name', () => {
@@ -41,5 +42,5 @@ test('get Employee role', () => {
     // create a new Employee instance
     const employee = new Employee('Victor', 'vmlujanjr@outlook.com', '123456789012');
 
-    expect(employee.getRole()).toEqual(expect.any(String));
+    expect(employee.getRole()).toEqual(expect.any(String)); // import choice...
 });
