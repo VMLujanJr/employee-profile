@@ -1,12 +1,6 @@
-const Logic = require('../lib/assets/js/Logic.js');
-const Engineer = require('../lib/assets/js/Engineer');
-const Manager = require('../lib/assets/js/Manager');
-const Intern = require('../lib/assets/js/Intern');
-
 const generatePortfolios = (receiveUserData) => {
 
-    const employee1 = receiveUserData.map(index => {
-
+    const employeeCard = receiveUserData.map(index => {
 
         if (index.officeNumber) {
             
@@ -20,9 +14,9 @@ const generatePortfolios = (receiveUserData) => {
                 </div>
                 <div class="p-5 rounded-b" id="container">
                     <div id="employee-details">
-                        <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="ID#">${id}</div>
-                        <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="employee-phone">${officeNumber}</div>
-                        <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="employee-email"><a href="mailto:${email}">${email}</a></div>
+                        <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="ID#">ID #: ${id}</div>
+                        <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="employee-phone">Office #: ${officeNumber}</div>
+                        <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="employee-email">E-mail: <a href="mailto:${email}">${email}</a></div>
                     </div>
                 </div>
             </div>
@@ -41,10 +35,9 @@ const generatePortfolios = (receiveUserData) => {
                 </div>
                 <div class="p-5 rounded-b" id="container">
                     <div id="employee-details">
-                        <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="ID#">${id}</div>
-                        <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="employee-github">${github}</div>
-                        <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="employee-github"><a href="https://github.com/${github}" target="_blank">${github}</a></div>
-                        <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="employee-email"><a href="mailto:${email}">${email}</a></div>
+                        <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="ID#">ID #: ${id}</div>
+                        <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="employee-github">GitHub: <a href="https://github.com/${github}" target="_blank">${github}</a></div>
+                        <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="employee-email">E-mail: <a href="mailto:${email}">${email}</a></div>
                     </div>
                 </div>
             </div>
@@ -63,16 +56,17 @@ const generatePortfolios = (receiveUserData) => {
                 </div>
                 <div class="p-5 rounded-b" id="container">
                     <div id="employee-details">
-                        <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="ID#">${id}</div>
-                        <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="employee-phone">${school}</div>
-                        <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="employee-email"><a href="mailto:${email}">${email}</a></div>
+                        <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="ID#">School: ${id}</div>
+                        <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="employee-school">School: ${school}</div>
+                        <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="employee-email">E-mail: <a href="mailto:${email}">${email}</a></div>
                     </div>
                 </div>
             </div>
             `;
         }
     });
-    console.log(employee1, '❗❗❗❗❗❗');
+
+    return employeeCard.join('');
 };
 
 const renderTemplate = (receiveUserData) => {

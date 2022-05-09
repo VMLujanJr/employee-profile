@@ -7,8 +7,7 @@ const Employee = require('../lib/assets/js/Employee.js');
 //   Tests...
 // ============
 test('create an Employee object', () => {
-    // create a new Employee instance
-    const employee = new Employee('Victor', 'vmlujanjr@outlook.com', '123456789012');
+tr@outlook.com', '123456789012');
 
     // expect Employee to contain the following properties
     expect(employee.name).toBe('Victor');

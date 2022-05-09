@@ -1,6 +1,7 @@
 module.exports = {
   content: [
-    './src/index.html'
+    './dist/index.html',
+    './src/homepage-template.js'
   ],
   theme: {
     extend: {},
