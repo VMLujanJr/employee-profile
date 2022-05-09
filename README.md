@@ -80,6 +80,7 @@ THEN I am prompted to enter the intern’s name, ID, email, and school, and I am
 THEN I exit the application, and the HTML is generated
 ~~~
 
+
 ## Mock-up
 
 ![mockup](./lib/assets/images/mock-up.png)
