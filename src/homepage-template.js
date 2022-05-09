@@ -56,7 +56,7 @@ const generatePortfolios = (receiveUserData) => {
                 </div>
                 <div class="p-5 rounded-b" id="container">
                     <div id="employee-details">
-                        <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="ID#">School: ${id}</div>
+                        <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="ID#">ID #: ${id}</div>
                         <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="employee-school">School: ${school}</div>
                         <div class="bg-slate-100 m-1 p-2 drop-shadow-lg" id="employee-email">E-mail: <a href="mailto:${email}">${email}</a></div>
                     </div>
